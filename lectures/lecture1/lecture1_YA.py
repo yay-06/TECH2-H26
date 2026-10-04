@@ -38,24 +38,16 @@ def argmax(values):
 
     N = len(values)
 
-    if N == 0:
-        print('Lenth zero sequneces not support')
-        return
-    
     imax = None
-    # Swt the vmax to lowest possible value
     vmax = -np.inf
-    
+
     for i in range(N):
-        #First iteration: value = 2
         value = values[i]
-        #Check whether this value is larger than any previous
+
         if value > vmax:
-            #Update the index and the max
             imax = i
             vmax = value
-
-    return imax
+    return imax            
 
 values = [2, 3, -1, 7, 4]
 imax = argmax(values)
