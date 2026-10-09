@@ -38,6 +38,9 @@ def argmax(values):
 
     N = len(values)
 
+    if N == 0:
+        raise ValueError ('attemp to get argmax of an empty sequence')
+
     imax = None
     vmax = -np.inf
 
